@@ -1,0 +1,541 @@
+
+\documentclass[article, 11pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage[table]{xcolor}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75,bmargin=1cm,footnotesep=1cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx} 
+\usepackage{enumitem} 
+\usepackage{chngcntr}
+\renewcommand{\thesection}{\arabic{section}} 
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{chemformula}
+\usepackage{subcaption}
+\usepackage{vmargin}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{array}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{2.5cm}                        % margen superior
+{16.75cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{2pt}                             % altura del pie de página
+{1.5cm}
+\newcommand{\dpartial}[2]{\frac{\partial #1 }{\partial #2}}
+\begin{document}
+	% Hoja de portada, únicamente editar nombres y códigos
+	
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale=0.5]{Logo}
+		\end{center}
+		
+		\begin{center}
+			
+			
+			{\scshape\Large LABORATORIO DE FÍSICA I \\ \par}
+			\vspace{0.5cm}
+			%			\hline
+			\vspace{2.5cm}
+			{\scshape\Large INFORME DE LABORATORIO\\ \par}
+			\vspace{0.5cm}
+			{\Large\bfseries P20: CAMPO MAGNÉTICO GENERADO POR UN CONDUCTOR.
+				\par}
+			
+			
+			
+			
+			
+			\vspace{1cm}
+			{\itshape Diego Nicolás Lobato de la Cruz \\
+				Primero de CC Físicas: Grupo E \par} 
+			
+			\vspace{0.5cm}
+			
+			Fecha de realización: 22/03/2023 ~~~~~~~~
+			Fecha de entrega: XX/04/2023
+			
+		\end{center}
+		
+		\vspace{2cm}
+		
+		\tableofcontents
+		\pagenumbering{gobble}
+	\end{titlepage}
+	
+	\newpage
+	
+	\pagenumbering{arabic}
+	
+	\section{INTRODUCCIÓN TEÓRICA} \label{1.}
+	
+	El objetivo es estudiar el campo magnético generado por un conductor rectilíneo y una a espira circular. A partir de la ley de Biot-Savart (1) es posible calcular el campo generado por un conductor con una forma especifica. Para el caso de la espira se puede demostrar que la solución analítica corresponde a las expresiones (2) y (3) para su valor y su incertidumbre teórica.
+	
+	$$ B = \dfrac{\mu_0}{4\pi}\oint \dfrac{l\vec{dl} \times \vec{r}}{r^3} ~~~~ (1)$$
+	
+	$$ B = \dfrac{a^2 I \mu_0 }{2(a^2+x^2)^{3/2}} ~~~~~~ x\rightarrow0 ~~~~ B= \dfrac{I\mu_0}{2a} ~~~~ (2)$$
+	
+	$$ \Delta B = B \sqrt{(\dfrac{\Delta a (a^2 -2x^2)}{a(a^2+x^2)})^2 + (\dfrac{\Delta I}{I})^2 +  (\dfrac{3x\Delta x }{(a^2 + x^2)})^2}  ~~~~ (3) $$
+	
+	\vspace{0.25cm}
+	 Para el caso de el conductor rectilíneo de longitud indefinida las expresiones para el campo y su incertidumbre corresponde a la (4) y la (5). Las expresiones para el campo se pueden desarrollar directamente de la (1) como se muestra en el guion de la practica$^[1]$. Para las formulas relativas a las incertidumbres se presenta un desarrollo en anexo. 
+	
+	$$ B= \dfrac{\mu_0 I }{2\pi x} ~~~~(4)$$
+	$$\Delta B = B\sqrt{(\dfrac{\Delta I}{I})^2 + (\dfrac{\Delta x}{x})^2} ~~~~ (5)$$
+	
+
+\newpage
+	
+	\section{INSTRUMENTACIÓN Y METODOLOGÍA}
+	
+	Para encontrar los valores del campo magnético se ha utilizado una sonda magnética posicionada en un soporte movible sobre una regla lo que nos permite obtener los valores del campo a distintas distancias del conductor. Se ha utilizado también una fuente de alimentación de voltaje alterno, que proporciona un voltaje comprendido entre 0V y 15V, un transformador de alta intensidad (1:100), que nos permite multiplicar la corriente que circula por el conductor, un amperimetro y un teslametro para obtener las medidas necesarias para estimar el valor del campo. Además, se han utilizado los conductores cuya forma esquemática se presenta en la figura 1. Todos los aparatos utilizados se presentan también en la figura 2. En esta imagen el montaje corresponde al realizado para el conductor rectilíneo aunque también se presenta el otro conductor.  
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}{.45\textwidth}
+			\centering
+			\includegraphics[width=.95\linewidth]{Formas}
+			\caption*{Figura 1: Forma de conductor rectilinio limitado y de la espira circular 
+				}
+		\end{minipage}%
+		\begin{minipage}{.45\textwidth}
+			\centering
+			\includegraphics[width=.65\linewidth]{Instru}
+			\caption*{Figura 2:Instrumentación utilizada}
+			
+		\end{minipage}
+	\end{figure}
+
+\newpage
+
+	\section{RESULTADOS}
+
+En primer lugar, se ha obtenido la precisión de los instrumentos de medida. Dichos valores se presentan en la tabla 1. Estos valores son los que representan la incertidumbre de nuestras medidas directa de longitud o distancia, intensidad de corriente y campo magnético.
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |m{7.5cm}  |   c  | }
+			\hline
+			$\Delta I$ ($A$) - Amperimetro :  &   $ 0.2$ \\ \hline
+			$ \Delta d$ ($cm$) - Regla	 &  $ 0.1$ \\  \hline
+			$\Delta B$ ($mT$) - Teslametro &  $0.01$   \\  \hline
+		\end{tabular}
+		\label{Tab:1}
+		\caption*{Tabla 1: Inceridumbre asociada a la precision de los aparatos}
+	\end{center}
+\end{table}
+
+
+A continuación se ha obtenido el valor del diámetro interior y exterior de la espira y, utilizando la formula (6), se ha calculado su radio y la incertidumbre asociada. La formula resulta de el desarrollo trivial con la formula (A1) del anexo. Al calcular el radio de esta manera podemos minimizar nuestra incertidumbre y obtener una mejor medida para el radio. Los valores obtenidos se presentan en la tabla 2. 
+
+$$ a= \dfrac{D_i + D_e}{4} ~~~~~~ \Delta a = 0.25\sqrt{(2*\Delta d)} ~~~~~(6)$$
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |m{7.5cm}  |   c  | }
+			\hline
+			$D_i$ ($cm$) - Diametro interno :  &   $ 6.0 \pm 0.1$ \\ \hline
+			$ D_e$ ($cm$) - Diametro externo	 &  $ 6.7 \pm 0.1$ \\  \hline
+			$ a $ ($cm$) - Diametro externo	 &  $ 6.350 \pm 0.035$ \\  \hline
+		\end{tabular}
+		\label{Tab:1}
+		\caption*{Tabla 2: Diametros y radio calculado de la espira}
+	\end{center}
+\end{table}
+
+
+\subsection{Espira circular}
+
+Una vez que disponemos de estos datos se han realizado mediciones para el caso de la espira circular colocando la sonda en su  centro y después se han tomado medidas el valor de la intensidad de corriente entre $0A$ y $100A$ a saltos de $10A$. Los datos obtenidos se presentan en la tabla 3.
+
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| c | c  |  }
+			\hline 
+			$\mathbf{I} (A)$ & $\mathbf{B}(mT)$  \\
+			\hline
+			
+			
+			$0~ \pm ~ 2$ & $ 0.03 ~ \pm ~ 0.01$  \\
+			
+			$10 ~ \pm ~ 2$ & $0.18~ \pm ~ 0.01$   \\
+			
+			$20~ \pm ~ 2$ & $0.39 ~ \pm ~ 0.01$  \\
+			
+			$30 ~ \pm ~ 2$ & $0.54 ~ \pm ~ 0.01$   \\
+			
+			$40 ~ \pm ~ 2$ & $0.76 ~ \pm ~ 0.01$   \\
+			
+			$50 ~ \pm ~ 2$ & $0.97 ~ \pm ~ 0.01$ \\
+			
+			$60 ~ \pm ~ 2$ & $1.13 ~ \pm ~ 0.01$   \\
+			
+			$70 ~ \pm ~ 2$ & $1.34 ~ \pm ~ 0.01$   \\
+			
+			$80 ~ \pm ~ 2$ & $1.55 ~ \pm ~ 0.01$   \\
+			
+			$90 ~ \pm ~ 2$ & $1.78 ~ \pm ~ 0.01$  \\
+				
+			$100 ~ \pm ~ 2$ & $1.98 ~ \pm ~ 0.01$  \\
+			
+			\hline
+			
+		\end{tabular}
+		\label{Tab:3}
+		\caption*{Tabla 3: Campo magnetico de espira circular B(I).}
+	\end{center}
+\end{table}
+
+
+
+
+
+Es posible representar en un gráfico los datos obtenidos experimentalmente en función de la intensidad de corriente y establecer una recta de regresión lineal utilizando las formulas (7) (8) (9) y (10) para las que se obtienen los valores presentados en la tabla 4. El gráfico se presenta la figura 3.
+
+$$m=\dfrac{\left(\sum_{i}^{n} X_i Y_i \right)- n\bar{X}\bar{Y}}{(\sum_{i}^{n} X_i ^2) - n\bar{X}^2} ~~~~ (7) ~~~~~~~~~~ \Delta m = t_{n-2} \dfrac{\sum_{i}^{n} (Y_i - mX_i -c)^2}{(n-2)(\sum_{i}^{n} X_i ^2 )- n\bar{X}^2} ~~~~(8)$$
+
+
+
+$$ c= \bar{Y} - m\bar{X} ~~~~ (9) ~~~~~~~~~~ \Delta c = t_{n-2} \dfrac{\sum_{i}^{n} (Y_i - mX_i -c)^2}{n-2}\left( n^{-1} + \dfrac{ \bar{X}^2}{(\sum_{i}^{n} X_i ^2) - n\bar{X}^2} \right) ~~~~(10)$$ 
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |m{7.5cm}  |   c  | }
+			\hline
+			$m$ ($T/A$) - Pendiente :  &   $ (2.0 ~\pm~ 5.9 )*10^{-5}$ \\ \hline
+			$ c$ ($T$) -  constante	 &  $( -1.4 ~\pm~ 3.5)*10^{-5} $ \\  \hline
+		\end{tabular}
+		\label{Tab:1}
+		\caption*{Tabla 4: Recta de regresión lineal}
+	\end{center}
+\end{table}
+
+
+Utilizando la ecuación de la recta de regresión y la formula (2) para $x=0m$ es posible obtener el valor de la constante de permeabilidad magnética del vacio $\mu_0$ como se muestra en las ecuaciones (11) y (12). En la tabla 5 hemos presentado el valor de la constante utilizando tanto la recta de regresión como el dato para la intensidad máxima de la tabla 3. Los cálculos en este caso se han realizado utilizando la formulas (13) y (14). También aparece en la tabla  el valor real proporcionado por el guión de la practica$^[1]$. Todas las formulas de incertidumbres presentan su desarrollo en el anexo.
+
+\begin{figure}[H]
+	\includegraphics{Regresion}
+	\caption*{Figura 3: Campo Magnetico espira circular para corriente variable}
+\end{figure}
+
+Para la pendiente tenemos:
+
+$$ \mu_0 = 2am ~~~~ (11)$$ 
+
+$$ \Delta \mu_0 = \mu_0 \sqrt{(\dfrac{\Delta a}{a})^2 + (\dfrac{\Delta m}{m})^2} $$
+
+Para el valor de la intensidad de corriente máxima:
+
+$$ \mu_0 = \dfrac{2Ba}{I} ~~~~ (13)$$
+
+
+$$ \Delta \mu_0 = \mu_0 \sqrt{(\dfrac{\Delta a}{a})^2   +  (\dfrac{\Delta B}{B})^2 + (\dfrac{\Delta I}{I})^2 } ~~~~ (14)$$
+
+
+\vspace{0.25}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |m{7.5cm}  |   c  | }
+			\hline
+			$\mu_0$ ($H/m$) - Pendiente :  &   $ (1.237 ~\pm~ 0.040)\cdot 10^{-6}$ \\ \hline
+			$\mu_0$ ($H/m$) -  Usando valor mayor	 &  $ (1.247 ~\pm~ 0.030)\cdot 10^{-6} $ \\  \hline
+			$\mu_0$ ($H/m$) -  Valor Real	 &  $ 4\pi \cdot 10^{-7} \approx 1.257 \cdot10^{-6} $ \\  \hline
+		\end{tabular}
+		\label{Tab:1}
+		\caption*{Tabla 5: Permeabilidad magnetica del vacio}
+	\end{center}
+\end{table}
+
+
+
+
+
+A partir de estos datos es posible calcular la incertidumbre relativa con la formula (15) y estimar por lo tanto el grado de precisión de nuestras medidas. Y con la formula (16) también es posible estimar el error relativo con respecto al valor real. Las incertidumbres asociadas a estas formulas tienen su desarrollo en el anexo.
+
+$$ \delta \mu_0 = \dfrac{\Delta \mu_0}{\mu_0} ~~~~ (15)$$
+
+$$ \delta_\epsilon \mu_0 = \dfrac{|\mu_0_{real} - \mu_0_{exp}|}{\mu_0_{real}} ~~~~ (16)$$
+
+
+En la tabla 6 se presentan los valores obtenidos para las incertidumbre relativa y el error relativo de la estimación de la permeabilidad magnética del vacío.
+
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ |m{9.5cm}  |   c  | }
+			\hline
+			$\delta \mu_0$ - Incertidumbre relativa pendiente :  &   $ 3.2 \% $ \\ \hline
+			$\delta \mu_0$ -  Incertidumbre relativa usando valor mayor	 &  $ 2.3 \% $ \\  \hline
+			$\delta_\epsilon \mu_0$  - Error relativo pendiente 	 &  $ 1.6 \%  $ \\  \hline
+			$\delta_\epsilon \mu_0$ -  Error relativo usando el valor mayor	 &  $ 0.74 \%  $ \\  \hline
+		\end{tabular}
+		\label{Tab:1}
+		\caption*{Tabla 6: Error e incertidumbre relativa para $\mu_0$ }
+		\end{center}
+	\end{table}
+
+
+Estos datos nos indican no solo un buen grado de precisión de nuestra estimación, asegurando que la realizada a partir del valor mayor de la intensidad de corriente es mas precisa, sino que también asegura que el valor obtenido es bastante exacto pues el error relativo solo representa un $1.6\%$ para el valor obtenido con la pendiente y $0.74\%$ para el cálculo realizado con la intensidad máxima. 
+
+
+
+
+
+
+Posteriormente, eligiendo como intensidad de corriente constante $50A$, se ha estudiado el comportamiento del campo magnético en el eje perpendicular a la espira y que pasa por su centro. Además usando las formulas (2) y (3) se ha calculado el valor de los valores teóricos correspondientes. Dichos valores se han presentado en la tabla 7. Nótese que los valores aquí presentados para la distancia ($x$) y el valor medido del campo $B_{exp}$ se presentan sin incertidumbre por comodidad, sin embargo estas al ser medidas directas si poseen incertidumbre que se corresponde a las presentadas en la tabla 1.
+
+
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| c | c  | c | c |}
+			\hline 
+
+			$\mathbf{x}(cm)$ & $\mathbf{B_{exp}}(mT)}$ & $\mathbf{B_{teo}}(mT)$  & $\Delta \mathbf{B_{teo}}$\\
+			\hline
+			
+			
+			$-5$ & $ 0.14 $ & $0.1510$  & $0.0091$ \\
+			
+			$-4 $ & $0.21$ & $0.236$  & $0.015$\\
+			
+			$-3$ & $0.35$ & $0.379$ & $0.024$\\
+			
+			$-2 $ & $0.58$ & $0.600$   & $0.035$\\
+			
+			$-1 $ & $0.82$ & $0.864$ & $0.042$\\
+			
+			$0 $ & $0.94$ & $0.997$   & $0.041$\\
+			
+			$1 $ & $0.83$ & $0.864$  & $0.042$ \\
+			
+			$2 $ & $0.57$ & $0.600 $ & $0.035$ \\
+			
+			$3 $ & $0.35 $ & $0.379$   & $0.024$\\
+			
+			$4$ & $0.21 $ & $0.236$   & $0.015$\\
+			
+			$5$ & $0.14 $ & $0.1510$   & $0.0091$\\
+				
+		
+			
+			\hline
+			
+		\end{tabular}
+		\label{Tab:3}
+		\caption*{Tabla 7: Campo magnetico en el eje de la espira }
+	\end{center}
+\end{table}
+
+
+
+
+
+
+Estos datos se pueden representar gráficamente para estudiar el comportamiento del campo y la compatibilidad de las medidas realizadas con el valor teórico. Dicha gráfica se presenta en al figura 4.
+
+
+\begin{figure}[H]
+	\includegraphics{Distanciaespira}
+	\caption*{Figura 4: Campo Magnetico en el eje central de una espira circular}
+\end{figure}
+
+
+
+\subsection{Conductor rectilíneo}
+
+ A continuación se han tomado medidas para el valor de el campo magnético generado a distintas distancias de un conductor rectilíneo. Para que el conductor se comportase de la manera mas parecida posible a un cable que se extiende en ambas direcciones indefinidamente se ha posicionado la sonda a la altura del centro del hilo conductor. Puesto que se trata realmente de un conductor rectangular es importante especificar que las medidas positivas para la distancia corresponden al interior del rectángulo formado por el conductor y las positivas para el exterior. Además de tomar dichas mediciones, con las formulas (4) y (5) se ha estimado el valor teórico que el campo debería asumir en las distintas posiciones para las mediciones. Los datos se han presentado en la tabla 8. 
+ 
+ 
+ 
+ 
+ \begin{table}[H]
+ 	\begin{center}
+ 		\resizebox{16.5cm}{!} {
+ 		\begin{tabular}{ |c  |   c  | c | c | c |c |c |c |c |c |c |c |c |c |c |}
+ 			\hline
+ 			$\mathbf{R}$ (cm)  &   $ -5 & -4 & -3 & -2 & -1.5 & -1 & -0.5 & 0.5 & 1 & 1.5 & 2 & 3 & 4 & 5 $   \\ \hline
+ 			
+ 			$\mathbf{B_{exp}}$ ($mT$)  &  $ 0.21$ & $ 0.24$ & $ 0.33 & 0.44 & 0.53 & 0.72 & 1.05 & 1.07 & 0.74 & 0.55& 0.45 & 0.31 & 0.23 & 0.19$  \\  \hline
+ 			
+ 			$\mathbf{B_{teo}}$ ($H/m$)  &  $ 0.200 & 0.250  & 0.333  & 0.500  & 0.667  & 0.100  & 0.200  & 0.200  & 0.100& 0.667  & 0.500  & 0.333 & 0.250 & 0.200   $  \\  \hline
+ 			
+ 			$\mathbf{\Delta B_{teo}}$ ($H/m$)  &  $ 0.0089  & 0.012 & 0.017  & 0.032  & 0.052  & 0.11  & 0.41  & 0.41  & 0.11  & 0.052  & 0.032  & 0.017& 0.012& 0.0089 $   \\  \hline
+ 		\end{tabular}
+ 	}
+ 		\label{Tab:1}
+ 		\caption*{Tabla 8: Campo magnetico de conductor rectilineo}
+ 	\end{center}
+ \end{table}
+ 
+ Posteriormente de igual manera que se ha hecho para el conductor de espira circular se ha realizado una gráfica donde se presenta tanto nuestras medidas como el comportamiento teórico de el campo. Dicha gráfica se presenta en la figura 5. 
+ 
+ 
+ \begin{figure}[H]
+ 	\includegraphics{Distanciarectilineo}
+ 	\caption*{Figura 5: Campo Magnético generado por un conductor rectilíneo}
+ \end{figure}
+ 
+ La figura 5  muestra una disonancia entre los valores teóricos y los valores experimentales en particular para los valores del campo en puntos mas cercanos al cable.
+ 
+ 
+ \section{COMENTARIOS Y CONCLUSIONES}
+ 
+Cuando se observan los datos de la tabla y la figura 3 se puede    constatar que los datos experimentales se ajustan a una
+ regresión lineal de manera satisfactoria. Sin embargo es importante notar que en el origen, es decir para $I=0A$, la medida del campo magnético debería ser cero de acuerdo a la expresión teórica (3) sin embargo se obtiene un valor mayor, $(0.03 \pm 0.01) mT$. Una posible explicación a esta desviación es la presencia de campos magnéticos distintos al del conductor en el laboratorio. Esta desviación por la influencia de un campo externo puede afectar levemente a las medidas, y además demuestra que la sonda es muy sensible frente a perturbaciones externas. Sin embargo es importante destacar que la estimación realizada para $\mu_0$ tienen un buen grado de precisión como de exactitud. Efectivamente no solo las medidas para la permeabilidad magnética del vació son compatibles si y con el valor tabulado, si no que la incertidumbre relativa tiene un valor máximo de $3.2\%$ correspondiente a la estimación a partir de la pendiente de la recta de regresión y un valor mínimo de $2.3\%$ para el cálculo a partir de el dato con la intensidad de corriente máxima de la tabla 3. Esto muestra que el segundo método es mas preciso que el primero. De la misma manera también es mas exacto puesto que el error relativo de este método con el valor tabulado es de solo $0.74\%$ frente al $1.6\%$ del otro.
+ 
+ 
+ 
+ Si analizamos los valores en la tabla 8 y la figura 5, podemos observar que en el caso de las mediciones para el campo magnético generado por un conductor rectilíneo la mayoría de nuestros datos experimentales no son compatibles con los valores teóricos. Esto puede deberse entre otras cosas a la presencia de campos externos y al hecho que realmente nuestro conductor no es indefinidamente largo mientras que la expresión utilizada si da por hecho que lo sea. Además hay que tener en cuenta que el conductor posee un cierto espesor cosa que tampoco se ha tenido en cuenta en la ecuación (4) y que la ecuación predice que el campo debería tender a infinito al acercarse al hilo conductor. Efectivamente los valores que mas se acercan a la compatibilidad son aquellos que distan mas del conductor puesto que algunos de estos factores reducen su influencia, como por ejemplo el espesor del conductor. En cualquier caso puesto que nuestro conductor no es rectilíneo sino una espira cuadrada se puede explicar porque para distancias positivas el campo es mas alto que para valores negativos puesto que existe una influencia de el resto de la espira en su interior. En cualquier caso vemos como el comportamiento general de los datos experimentales es parecido al esperado teóricamente. 
+ 
+ 
+ 
+ 
+ En conclusión podemos afirmar que el experimento se ha realizado satisfactoriamente puesto que se ha podido medir el campo generado por ambos conductores, calcular con un buen grado de precisión y de exactitud el valor de la permeabilidad magnética del vacio. Sin embargo sería conveniente buscar maneras para evitar la influencia de efectos externos y buscar una aproximación teórica mas realista para evitar la incompatibilidad debido a los factores comentados anteriormente. 
+ 
+ 
+ 
+ 
+ 
+
+\section{ ANEXO: Cálculo  y desarrollo de fórmulas}
+
+
+La fórmula general para calcular la incertidumbre de una medida indirecta es:
+
+
+$$	\Delta X = \sqrt{\sum{(\dpartial{X}{X_i} \Delta X_i)^2}}  ~~~~~~~(A1)$$
+
+
+
+\subsection*{Campo electrico generado por una espira circular}
+
+Dada la (2) es posible calcular la incertidumbre asociada calculando las derivadas parciales en función de cada una de las variables:
+
+
+
+\begin{equation*}
+	\setlength{\jot}{12pt} % affecting the line spacing in the environment
+	\begin{split}
+		\dpartial{B}{a}= -\dfrac{\textrm{I}\,a\,\mu \,{\left(a^2 -2\,x^2 \right)}}{2\,{{\left(a^2 +x^2 \right)}}^{5/2} } = \dfrac{B (a^2 -2x^2)}{a(a^2+x^2)} ~~~~~~ (A2) \\
+		\dpartial{B}{I} = \dfrac{a^2 \,\mu }{2\,{{\left(a^2 +x^2 \right)}}^{3/2} } = \dfrac{B}{I} ~~~~~~ (A3) \\
+		 \dpartial{B}{x} = \dfrac{-3\,\textrm{I}\,a^2 \,\mu \,x}{2\,{{\left(a^2 +x^2 \right)}}^{5/2} } = \dfrac{3Bx}{(a^2+x^2)} ~~~~~~ (A4) \\
+     	\end{split}
+\end{equation*}
+
+
+Que desarrollada como la (A1) nos devuelve la formula 3.
+
+$$ \Delta B = B \sqrt{(\dfrac{\Delta a (a^2 -2x^2)}{a(a^2+x^2)})^2 + (\dfrac{\Delta I}{I})^2 +  (\dfrac{3x\Delta x }{(a^2 + x^2)})^2}   $$
+
+
+
+\subsection*{Campo generado por un conductor rectilíneo}
+
+Dada la formula (4) es posible calcular el valor de la incertidumbre asociada calculando las derivadas parciales como en las ecuaciones (A5) y (A6).
+
+\begin{equation*}
+	\setlength{\jot}{12pt} % affecting the line spacing in the environment
+	\begin{split}
+		\dpartial{B}{I} = \dfrac{\mu }{2 \pi x} =\dfrac{B}{I}  ~~~~~~ (A5) \\
+		\dpartial{B}{x} =  \dfrac{\mu I }{2 pi x^2}=\dfrac{-B}{x} ~~~~~~ (A6) \\
+	\end{split}
+\end{equation*}
+
+Ahora sustituyendo en la (A1) volvemos a obtener la ecuación 5.
+
+
+$$\Delta B = B\sqrt{(\dfrac{\Delta I}{I})^2 + (\dfrac{\Delta x}{x})^2}$$
+
+
+\subsection*{Cálculo de $\mu$ con la pendiente}
+
+Sea la formula (11) podemos calcular las derivadas parciales como se muestra en la (A7) y (A8)
+
+
+\begin{equation*}
+	\setlength{\jot}{12pt} % affecting the line spacing in the environment
+	\begin{split}
+		\dpartial{\mu_0}{a} = 2m =\dfrac{\mu_0}{a}  ~~~~~~ (A7) \\
+		\dpartial{\mu_0}{m} = 2a =\dfrac{\mu_0}{m} ~~~~~~ (A8) \\
+	\end{split}
+\end{equation*}
+
+
+Lo que sustituido en la formula (A1) nos devuelve la formula (12)
+
+$$ \Delta \mu_0 = \mu_0 \sqrt{(\dfrac{\Delta a}{a})^2 + (\dfrac{\Delta m}{m})^2} $$
+
+
+
+\subsection*{Cálculo de $\mu$ con el valor máximo de la intensidad de corriente}
+
+Tomando las derivadas parciales de la formula (13) obtenemos la (A9) y la (A10)
+
+\begin{equation*}
+	\setlength{\jot}{12pt} % affecting the line spacing in the environment
+	\begin{split}
+		\dpartial{\mu_0}{a} = \dfrac{2B}{I} \dfrac{\mu_0}{a}  ~~~~~~ (A7) \\
+		\dpartial{\mu_0}{B} = \dfrac{2a}{I} =\dfrac{\mu_0}{B} ~~~~~~ (A8) \\
+		\dpartial{\mu_0}{I} = \dfrac{-2B}{I^2} =\dfrac{-\mu_0}{I} ~~~~~~ (A8) \\
+	\end{split}
+\end{equation*}
+
+
+Que si la sustituimos en la (A1) se puede obtener nuevamente la formula (14)
+
+
+$$ \Delta \mu_0 = \mu_0 \sqrt{(\dfrac{\Delta a}{a})^2   +  (\dfrac{\Delta B}{B})^2 + (\dfrac{\Delta I}{I})^2 }$$
+
+
+\subsection*{Realización de cálculo y gráficos}
+
+Se adjunta en esta sección el enlace a la pagina de github donde se adjunta todos los códigos propios que se han usado para realizar los cálculos presentados en este informe. Notese que el archivo donde se presentan los cálculos es el LiveScript mientras que el resto de funciones son funciones auxiliares que son llamadas posteriormente desde el archivo mxl.
+
+\textbf{COMPROMISO DE ORIGINALIDAD }: Yo, Diego Nicolás Lobato de la Cruz, declaro que este informe es original, no habiendo recurrido para su elaboración a fuentes que no hayan sido expresamente citadas para el mismo.
+
+
+
+\section{REFERENCIAS}
+
+$[1]$ Guion de la práctica 20,Campo magnético generado por un conductor, Laboratorio de Física, Facultad de CC. Físicas, UCM, https://fisicas.ucm.es/file/20-campo-magnetico\\
+
+
+
+\newpage 
+
+
+\centering
+%\includegraphics[scale=0.55]{Datos}
+
+
+
+
+\end{document}
+
+
+
